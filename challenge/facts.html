@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obscure Fun Facts για την Ακρόπολη</title>
+  <link rel="stylesheet" href="facts.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <h1>Η Ακρόπολη</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="../home/home.html" class="nav-link"><i class="fas fa-home"></i> Αρχική</a>
+      <a href="#progress" class="nav-link"><i class="fas fa-chart-line"></i> Πρόοδος</a>
+      <button class="logout-btn" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Αποσύνδεση
+      </button>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <main class="chapter-container">
+    <section class="intro-section">
+      <h2>Εισαγωγή</h2>
+      <p class="content-text">Η Ακρόπολη δεν είναι μόνο σύμβολο του αρχαίου ελληνικού πολιτισμού αλλά και πηγή πολλών άγνωστων και συναρπαστικών ιστοριών. Ας εξερευνήσουμε μερικά από τα πιο ιδιαίτερα fun facts που πιθανότατα δεν γνωρίζατε.</p>
+    </section>
+
+    <img src="../assets/acropolis.jpg" width="100%" height="auto" alt="Ακρόπολη">
+
+    <section class="monuments-section" id="facts">
+      <h3>Τα 10 Fun Facts για την Ακρόπολη</h3>
+
+      <div class="monument">
+        <h4>1. Προϊστορικός Οικισμός</h4>
+        <p class="content-text">Η Ακρόπολη κατοικούνταν ήδη από τη Νεολιθική εποχή, με ίχνη κατοικιών και τάφων από την πρώιμη εποχή του Χαλκού.</p>
+      </div>
+
+      <div class="monument">
+        <h4>2. Εκκλησία και Τζαμί</h4>
+        <p class="content-text">Ο Παρθενώνας μετατράπηκε σε εκκλησία και αργότερα σε τζαμί κατά τη διάρκεια της Οθωμανικής κυριαρχίας.</p>
+      </div>
+
+      <div class="monument">
+        <h4>3. Το Άγαλμα της Αθηνάς ως Φάρος</h4>
+        <p class="content-text">Το χρυσελεφάντινο άγαλμα της Αθηνάς Παρθένου φαινόταν από τον Σαρωνικό, βοηθώντας τους ναυτικούς να προσανατολιστούν.</p>
+      </div>
+
+      <div class="monument">
+        <h4>4. Ολόκληρος ο Παρθενώνας προς Εξαγωγή</h4>
+        <p class="content-text">Ο Λόρδος Έλγιν σχεδίαζε να μεταφέρει ολόκληρο το οικοδόμημα στην Αγγλία – όχι μόνο τα γλυπτά!</p>
+      </div>
+
+      <div class="monument">
+        <h4>5. Πολυχρωμία</h4>
+        <p class="content-text">Τα γλυπτά και η πρόσοψη του Παρθενώνα ήταν βαμμένα σε έντονα χρώματα όπως μπλε, κόκκινο και χρυσό.</p>
+      </div>
+
+      <div class="monument">
+        <h4>6. Ιερό Φίδι και Ελιά</h4>
+        <p class="content-text">Το Ερεχθείο φιλοξενούσε ιερό φίδι και την ελιά που φύτεψε η θεά Αθηνά σύμφωνα με τον μύθο.</p>
+      </div>
+
+      <div class="monument">
+        <h4>7. Μυστική Πηγή</h4>
+        <p class="content-text">Η Κλεψύδρα, μια υπόγεια πηγή στη βόρεια πλευρά, εξασφάλιζε νερό σε περιόδους πολιορκίας.</p>
+      </div>
+
+      <div class="monument">
+        <h4>8. Έκρηξη στον Παρθενώνα</h4>
+        <p class="content-text">Το 1687, μια οβίδα των Βενετών χτύπησε τον Παρθενώνα προκαλώντας καταστροφή, καθώς χρησίμευε ως αποθήκη πυρίτιδας.</p>
+      </div>
+
+      <div class="monument">
+        <h4>9. Αναπαλαίωση από τον Αδριανό</h4>
+        <p class="content-text">Ο ρωμαίος αυτοκράτορας Αδριανός επανέφερε τη σημασία του χώρου με επεμβάσεις και αφιερώσεις.</p>
+      </div>
+
+      <div class="monument">
+        <h4>10. Οπτικές Απάτες</h4>
+        <p class="content-text">Οι κίονες του Παρθενώνα έχουν ελαφρά κλίση και η βάση είναι κυρτή, ώστε το κτίσμα να φαίνεται τέλεια ευθύ στα μάτια.</p>
+      </div>
+    </section>
+
+    <section class="media-styles">
+      <h3>Ντοκιμαντέρ για την Ακρόπολη</h3>
+      <ul class="content-text">
+        <iframe width="820px" height="400px" src="https://www.youtube.com/embed/TBCkTiue0D8?si=Cwo4mOIfMkg5ovTN" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <iframe width="820px" height="400px" src="https://www.youtube.com/embed/663L4bl5fWc?si=DXI6dh-WoeCX5qHD" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </ul>
+    </section>
+    <section class="challenge-button">
+    <div style="text-align:center; margin-top: 20px;">
+                <a href="/challenge/challenge.html" class="challenge-button" style="
+                  padding: 10px 20px;
+                  background-color: #d35d47;
+                  color: white;
+                  text-decoration: none;
+                  border-radius: 8px;
+                  font-weight: bold;
+                  display: inline-block;
+                ">
+                  Quiz Ενότητας
+                </a>
+    </div>
+    </section>
+    <br>
+  </main>
+
+  <footer class="chapter-footer">
+    <p>&copy; 2025 Εκπαιδευτικό Λογισμικό – Η Ακρόπολη | Πανεπιστήμιο Πειραιώς</p>
+    <p class="sources">Πηγές: Μουσείο Ακρόπολης, Ιστορικά Αρχεία, Μηχανή του Χρόνου</p>
+  </footer>
+</body>
+</html>

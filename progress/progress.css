@@ -1,0 +1,155 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #002147;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.logout-btn {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  background-color: #e60000;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.header {
+  background-color: #002147;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.progress-card {
+  background-color: #f1f1f1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.progress-card:hover {
+  background-color: #e7f3ff;
+  transform: scale(1.02);
+}
+
+.progress-card h3 {
+  margin-bottom: 1rem;
+  color: #0066cc;
+}
+
+.progress-card.empty {
+  opacity: 0.6;
+  background-color: #f9f9f9;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.progress-card {
+  background-color: #f1f1f1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.progress-card:hover {
+  background-color: #e7f3ff;
+  transform: scale(1.02);
+}
+
+.progress-card h3 {
+  margin-bottom: 1rem;
+  color: #0066cc;
+}
+
+.progress-card.empty {
+  opacity: 0.6;
+  background-color: #f9f9f9;
+}

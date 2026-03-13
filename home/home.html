@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Η Ακρόπολη – Εκπαιδευτικό Μάθημα</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <h1>Η Ακρόπολη</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="#modules" class="nav-link"><i class="fas fa-book-open"></i> Ενότητες</a>
+      <a href="../progress/progress.html" class="nav-link"><i class="fas fa-chart-line"></i> Πρόοδος</a>
+      <button class="logout-btn" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Αποσύνδεση
+      </button>
+      <span class="user-greeting">Καλώς ήρθες, </span>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Ανακαλύψτε το Θαύμα της Αρχαίας Ελλάδας</h2>
+      <p>Μια διαδραστική μαθησιακή εμπειρία για την Ακρόπολη και τα μνημεία της</p>
+      <div class="cta-container">
+        <button class="start-course-btn" onclick="document.getElementById('modules').scrollIntoView({ behavior: 'smooth' });">
+          <i class="fas fa-play"></i> Ξεκινήστε το Μάθημα
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div id="challenge-button-container"></div>
+
+  <section class="course-modules" id="modules">
+    <h2 class="section-title"><i class="fas fa-layer-group"></i> Ενότητες Μαθήματος</h2>
+    <div class="module-grid">
+      <div class="module-card" onclick="goToSection('history')">
+        <div class="module-icon">
+          <i class="fas fa-history"></i>
+        </div>
+        <h3>Ιστορία της Ακρόπολης</h3>
+        <p>Από την αρχαιότητα έως σήμερα</p>
+      </div>
+
+      <div class="module-card" onclick="goToSection('monuments')">
+        <div class="module-icon">
+          <i class="fas fa-landmark"></i>
+        </div>
+        <h3>Τα Μνημεία</h3>
+        <p>Παρθενώνας, Ερέχθειο, Προπύλαια</p>
+      </div>
+
+      <div class="module-card" onclick="goToSection('architecture')">
+        <div class="module-icon">
+          <i class="fas fa-archway"></i>
+        </div>
+        <h3>Αρχιτεκτονική</h3>
+        <p>Δωρικός, Ιωνικός, Κορινθιακός ρυθμός</p>
+      </div>
+
+      <div class="module-card" onclick="goToSection('quiz')">
+        <div class="module-icon">
+          <i class="fas fa-question-circle"></i>
+        </div>
+        <h3>Quiz</h3>
+        <p>Αξιολογήστε τις γνώσεις σας</p>
+      </div>
+    </div>
+
+    <div class="cta-container" style="text-align: center; margin-top: 2rem;">
+      <button class="start-course-btn" onclick="goToSection('progress')">
+        <i class="fas fa-chart-line"></i> Πρόοδος
+      </button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Εκπαιδευτικό Λογισμικό – Η Ακρόπολη | Πανεπιστήμιο Πειραιώς</p>
+  </footer>
+
+  <script>
+    function logout() {
+      alert("Αποσυνδεθήκατε.");
+      window.location.href = "login/login.html";
+    }
+
+    function toggleMobileMenu() {
+      const nav = document.querySelector(".main-nav");
+      nav.classList.toggle("responsive");
+    }
+
+    function goToPage(url) {
+      window.location.href = url;
+    }
+  </script>
+  <script src="home.js"></script>
+</body>
+</html>

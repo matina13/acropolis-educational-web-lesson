@@ -1,0 +1,68 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+}
+
+.quiz-header {
+  background-color: #002147;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.quiz-header nav {
+  margin-top: 0.5rem;
+}
+
+.back-home {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.quiz-selection {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.quiz-category {
+  margin-bottom: 2rem;
+}
+
+.quiz-category h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  color: #002147; 
+}
+
+.quiz-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.quiz-button {
+  background-color: #002147; 
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 1.1rem;
+  transition: background-color 0.2s;
+}
+
+.quiz-button:hover {
+  background-color: #00112a; 
+}
+
+.quiz-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  font-size: 0.9rem;
+}

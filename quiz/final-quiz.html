@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Τελικό Επαναληπτικό Τεστ</title>
+  <link rel="stylesheet" href="questions.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Τελικό Επαναληπτικό Quiz – Η Ακρόπολη</h1>
+  </header>
+
+  <main class="quiz-container">
+    <section class="quiz-section">
+      <h2>1. Πολλαπλής Επιλογής</h2>
+
+      <div class="question">
+        <p><strong>1. Ποιο ήταν το κύριο υλικό κατασκευής του Παρθενώνα;</strong></p>
+        <label><input type="radio" name="q1" value="Μάρμαρο"> Μάρμαρο</label><br />
+        <label><input type="radio" name="q1" value="Πλίνθοι"> Πλίνθοι</label><br />
+        <label><input type="radio" name="q1" value="Ξύλο"> Ξύλο</label><br />
+        <label><input type="radio" name="q1" value="Γρανίτης"> Γρανίτης</label>
+      </div>
+
+      <div class="question">
+        <p><strong>2. Ποια θεά ήταν αφιερωμένος ο Παρθενώνας;</strong></p>
+        <label><input type="radio" name="q2" value="Αθηνά"> Αθηνά</label><br />
+        <label><input type="radio" name="q2" value="Άρτεμις"> Άρτεμις</label><br />
+        <label><input type="radio" name="q2" value="Ήρα"> Ήρα</label><br />
+        <label><input type="radio" name="q2" value="Αφροδίτη"> Αφροδίτη</label>
+      </div>
+    </section>
+
+    <section class="quiz-section">
+      <h2>2. Σωστό / Λάθος</h2>
+
+      <div class="question">
+        <p><strong>3. Ο Δωρικός ρυθμός χαρακτηρίζεται από διακοσμητικότητα και λεπτότητα.</strong></p>
+        <label><input type="radio" name="q3" value="Λάθος"> Λάθος</label><br />
+        <label><input type="radio" name="q3" value="Σωστό"> Σωστό</label>
+      </div>
+
+      <div class="question">
+        <p><strong>4. Ο Παρθενώνας βρίσκεται στην Ακρόπολη των Αθηνών.</strong></p>
+        <label><input type="radio" name="q4" value="Σωστό"> Σωστό</label><br />
+        <label><input type="radio" name="q4" value="Λάθος"> Λάθος</label>
+      </div>
+    </section>
+
+    <section class="quiz-section">
+      <h2>3. Αντιστοίχιση</h2>
+      <p><strong>5. Αντιστοίχισε το μνημείο με τη σωστή του περιγραφή:</strong></p>
+      <table class="match-table">
+        <tr>
+          <th>Μνημείο</th>
+          <th>Περιγραφή</th>
+        </tr>
+        <tr>
+          <td>Παρθενώνας</td>
+          <td>
+            <select id="match1">
+              <option>--Επιλέξτε--</option>
+              <option>Μνημείο για τη νίκη των Ελλήνων</option>
+              <option>Ναός αφιερωμένος στην Αθηνά</option>
+              <option>Αγορά για κοινωνικές συναθροίσεις</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Νίκη Απτερος</td>
+          <td>
+            <select id="match2">
+              <option>--Επιλέξτε--</option>
+              <option>Μνημείο για τη νίκη των Ελλήνων</option>
+              <option>Ναός αφιερωμένος στην Αθηνά</option>
+              <option>Αγορά για κοινωνικές συναθροίσεις</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Στοά Αττάλου</td>
+          <td>
+            <select id="match3">
+              <option>--Επιλέξτε--</option>
+              <option>Μνημείο για τη νίκη των Ελλήνων</option>
+              <option>Ναός αφιερωμένος στην Αθηνά</option>
+              <option>Αγορά για κοινωνικές συναθροίσεις</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <button class="submit-btn" onclick="submitFinalTest()">Υποβολή</button>
+    <div id="results" class="results-container"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Η Ακρόπολη | Εκπαιδευτικό Λογισμικό</p>
+  </footer>
+
+  <script>
+    async function submitFinalTest() {
+      let score = 0;
+      const userAnswers = {};
+
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      userAnswers.q1 = q1 ? q1.value : null;
+      userAnswers.q2 = q2 ? q2.value : null;
+      if (q1 && q1.value === "Μάρμαρο") score++;
+      if (q2 && q2.value === "Αθηνά") score++;
+
+      const q3 = document.querySelector('input[name="q3"]:checked');
+      const q4 = document.querySelector('input[name="q4"]:checked');
+      userAnswers.q3 = q3 ? q3.value : null;
+      userAnswers.q4 = q4 ? q4.value : null;
+      if (q3 && q3.value === "Λάθος") score++;
+      if (q4 && q4.value === "Σωστό") score++;
+
+      const match1 = document.getElementById("match1").value;
+      const match2 = document.getElementById("match2").value;
+      const match3 = document.getElementById("match3").value;
+      userAnswers.match1 = match1;
+      userAnswers.match2 = match2;
+      userAnswers.match3 = match3;
+      if (match1 === "Ναός αφιερωμένος στην Αθηνά") score++;
+      if (match2 === "Μνημείο για τη νίκη των Ελλήνων") score++;
+      if (match3 === "Αγορά για κοινωνικές συναθροίσεις") score++;
+
+      const totalQuestions = 7;
+      const resultContainer = document.getElementById("results");
+      resultContainer.innerHTML = `
+        <h3>Αποτελέσματα</h3>
+        <p><strong>Σκορ:</strong> ${score} / ${totalQuestions}</p>
+      `;
+      resultContainer.scrollIntoView({ behavior: "smooth" });
+
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user && user.id) {
+        try {
+          await fetch('http://localhost:3000/save-quiz-result', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId: user.id, chapterId: 4, score, totalQuestions, answers: userAnswers })
+          });
+        } catch (err) {
+          console.error('Failed to save result:', err);
+        }
+      }
+    }
+  </script>
+</body>
+</html>

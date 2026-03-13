@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Τα Μνημεία της Ακρόπολης</title>
+  <link rel="stylesheet" href="chapter2.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <h1>Η Ακρόπολη</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="../home/home.html" class="nav-link"><i class="fas fa-home"></i> Αρχική</a>
+      <a href="#progress" class="nav-link"><i class="fas fa-chart-line"></i> Πρόοδος</a>
+      <button class="logout-btn" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Αποσύνδεση
+      </button>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <main class="chapter-container">
+    <section class="intro-section">
+      <h2><i class="fas fa-university"></i> Εισαγωγή στα Μνημεία</h2>
+      <img src="../assets/acropolis_monuments.jpg" width="100%" height="auto" alt="Μνημεία Ακρόπολης">
+      <div class="content-text">
+        <p>Η Ακρόπολη δεν είναι μόνο ένα σύνολο ιστορικών περιόδων, αλλά και ένας τόπος που στεγάζει μερικά από τα πιο εμβληματικά μνημεία του αρχαίου κόσμου. Στο κεφάλαιο αυτό, εξετάζουμε τρεις από τους πιο σπουδαίους ναούς: τον Παρθενώνα, το Ερέχθειο και τα Προπύλαια.</p>
+      </div>
+    </section>
+
+    <section class="monuments-section">
+
+      <article class="monument">
+        <h3>Ο Παρθενώνας</h3>
+        <img src="../assets/parthenonCh2.jpg" width="100%" height="auto" alt="Παρθενώνας">
+        <div class="content-text">
+          <p>Ο Παρθενώνας, αφιερωμένος στην Αθηνά Παρθένο, αποτελεί το κορυφαίο δείγμα δωρικού ναού και σύμβολο της κλασικής Ελλάδας. Κατασκευάστηκε μεταξύ 447 και 438 π.Χ., υπό την επίβλεψη του Φειδία, και σχεδιάστηκε από τους Ικτίνο και Καλλικράτη.</p>
+          <p>Οι ανάγλυφες μετόπες, η ζωφόρος και τα αετώματα του ναού αφηγούνται ιστορίες μυθολογίας και αθηναϊκής ταυτότητας. Στο εσωτερικό του φιλοξενούσε το περίφημο άγαλμα της Αθηνάς από χρυσό και ελεφαντόδοντο.</p>
+          <p>Η αρχιτεκτονική του ενσωματώνει διορθωτικές καμπυλώσεις και αρμονικές αναλογίες, ώστε να δημιουργεί την ψευδαίσθηση τέλειας ευθυγράμμισης. Ακόμη και τα τύμπανα των κιόνων ελαφρώς κλίνουν προς τα μέσα, για λόγους οπτικής διόρθωσης.</p>
+          <li><a href="https://parthenonfrieze.gr/parthenonas/" target="_blank">Επισκέψου ιστοσελίδα αφιερωμένη στον Παρθενώνα!</a></li>
+          <li><a href="https://parthenonfrieze.gr/paixnidia/" target="_blank">Παίξε παιχνίδια σχετικά με τον Παρθενώνα!</a></li>
+        </div>
+        <p>Ακολουθεί βίντεο αναπαράστασης του μνημείου κατά την αρχαιότητα.</p>
+        <iframe width="820px" height="400px" src="https://www.youtube.com/embed/_TO5Ls296uQ?si=TFuaii6pETEndZBv" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </article>
+
+      <article class="monument">
+        <h3>Το Ερέχθειο</h3>
+        <img src="../assets/erechtheion.jpg" width="100%" height="auto" alt="Ερέχθειο">
+        <div class="content-text">
+          <p>Το Ερέχθειο είναι ένας ασύμμετρος ιωνικός ναός που χτίστηκε μεταξύ 421 και 406 π.Χ. και φιλοξενούσε πολλά αρχαία ιερά και μνημεία. Εδώ τιμούνταν ο Ποσειδώνας, ο Ερεχθέας, και φυσικά η Αθηνά Πολιάς, η πολιούχος θεά της πόλης.</p>
+          <p>Το πιο αναγνωρίσιμο μέρος του ναού είναι η "Ποικίλη Στοά των Καρυατίδων", όπου έξι γυναικείες μορφές χρησιμοποιούνται ως κίονες. Οι αυθεντικές βρίσκονται σήμερα στο Μουσείο Ακρόπολης και στο Βρετανικό Μουσείο.</p>
+          <p>Το Ερέχθειο χτίστηκε σε σημείο με μεγάλες υψομετρικές διαφορές, κάτι που οδήγησε στη δημιουργία ενός πολυεπίπεδου σχεδίου – ένα τεχνικό και καλλιτεχνικό επίτευγμα της εποχής.</p>
+        </div>
+        <p>Ακολουθεί βίντεο παρουσίασης του μνημείου.</p>
+        <iframe width="820px" height="400px" src="https://www.youtube.com/embed/xsPXmp5X_dA?si=kqGxmw8VY163lPPB" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <p>Ακολουθεί βίντεο συντήρησης των Καρυάτιδων.</p>
+        <iframe width="820px" height="400px" src="https://www.youtube.com/embed/bwCNfQh8Woo?si=8Leh4VtoKi2abmIn" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <li><a href="https://www.theacropolismuseum.gr/erehtheio-karyatida-kori" target="_blank">Διάβασε για τη Καρυάτιδα κόρη.</a></li>
+      </article>
+
+      <article class="monument">
+        <h3>Τα Προπύλαια</h3>
+        <img src="../assets/propylaea.jpg" width="100%" height="auto" alt="Προπύλαια">
+        <div class="content-text">
+          <p>Τα Προπύλαια είναι η μνημειακή είσοδος της Ακρόπολης και κατασκευάστηκαν μεταξύ 437 και 432 π.Χ. από τον αρχιτέκτονα Μνησικλή. Ο σχεδιασμός τους συνδυάζει τον δωρικό και ιωνικό ρυθμό με ιδιαίτερη κομψότητα.</p>
+          <p>Αποτελούνται από κεντρική στοά με έξι δωρικούς κίονες στην πρόσοψη και δύο πτέρυγες εκατέρωθεν. Η βόρεια πτέρυγα περιείχε την Πινακοθήκη, ενώ η νότια οδηγούσε στον Ναό της Αθηνάς Νίκης.</p>
+          <p>Η χρήση μαρμάρου Πεντελικού και οι αρμονικές αναλογίες καθιστούν τα Προπύλαια πρότυπο αρχιτεκτονικής εισόδου. Αν και δεν ολοκληρώθηκαν ποτέ πλήρως, επηρέασαν καθοριστικά τη δυτική αρχιτεκτονική.</p>
+        </div>
+        <p>Ακολουθεί βίντεο της αποκατάστασης της νότιας πτέρυγας των Προπυλαίων.</p>
+        <iframe width="820px" height="400px" src="https://www.youtube.com/embed/pHT5chTC-RE?si=az0pR_f2LBAx_Rv6" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="chapter-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Εκπαιδευτικό Λογισμικό – Η Ακρόπολη | Πανεπιστήμιο Πειραιώς</p>
+      <p class="sources">Πηγές: Υπουργείο Πολιτισμού και Αθλητισμού - Μουσείο Ακρόπολης - Υπηρεσία Συντήρησης Μνημείων Ακρόπολης - Εθνικό Κέντρο Τεκμηρίωσης & Ηλεκτρονικού Περιεχομένου</p>
+    </div>
+  </footer>
+
+  <script src="chapter2.js"></script>
+</body>
+</html>

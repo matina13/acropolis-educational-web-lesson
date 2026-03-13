@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz - Αρχιτεκτονική</title>
+  <link rel="stylesheet" href="questions.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <h1>Κουίζ - Αρχιτεκτονική</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="../home/home.html" class="nav-link"><i class="fas fa-home"></i> Αρχική</a>
+      <a href="/chapter3/chapter3.html" class="nav-link"><i class="fas fa-book"></i> Επιστροφή στο Κεφάλαιο</a>
+    </nav>
+  </header>
+
+  <main class="quiz-container">
+    <section class="quiz-section">
+      <h2>Ερωτήσεις Πολλαπλής Επιλογής</h2>
+
+      <div class="question">
+        <p><strong>1. Ποιο αρχιτεκτονικό ρεύμα είναι το παλαιότερο και πιο αυστηρό;</strong></p>
+        <label><input type="radio" name="q1" value="Δωρικός"> Δωρικός</label><br />
+        <label><input type="radio" name="q1" value="Ιωνικός"> Ιωνικός</label><br />
+        <label><input type="radio" name="q1" value="Κορινθιακός"> Κορινθιακός</label><br />
+        <label><input type="radio" name="q1" value="Μυκηναϊκός"> Μυκηναϊκός</label>
+      </div>
+
+      <div class="question">
+        <p><strong>2. Ποιο από τα παρακάτω χαρακτηρίζει τον Ιωνικό ρυθμό;</strong></p>
+        <label><input type="radio" name="q2" value="Κομψότητα και διακοσμητικότητα"> Κομψότητα και διακοσμητικότητα</label><br />
+        <label><input type="radio" name="q2" value="Αυστηρότητα και απλότητα"> Αυστηρότητα και απλότητα</label><br />
+        <label><input type="radio" name="q2" value="Σχήμα πυραμίδας"> Σχήμα πυραμίδας</label><br />
+        <label><input type="radio" name="q2" value="Χωρίς κίονες"> Πλήρης απουσία κιόνων</label>
+      </div>
+    </section>
+
+    <section class="quiz-section">
+      <h2>Ερωτήσεις Σωστό / Λάθος</h2>
+
+      <div class="question">
+        <p><strong>3. Οι Αθηναίοι χρησιμοποιούσαν κονίαμα για να ενώσουν τις πέτρες των ναών.</strong></p>
+        <label><input type="radio" name="q3" value="Λάθος"> Λάθος</label><br />
+        <label><input type="radio" name="q3" value="Σωστό"> Σωστό</label>
+      </div>
+
+      <div class="question">
+        <p><strong>4. Ο Κορινθιακός ρυθμός είναι πιο περίτεχνος από τον Δωρικό.</strong></p>
+        <label><input type="radio" name="q4" value="Σωστό"> Σωστό</label><br />
+        <label><input type="radio" name="q4" value="Λάθος"> Λάθος</label>
+      </div>
+    </section>
+
+    <section class="quiz-section">
+      <h2>Αντιστοίχιση</h2>
+      <p><strong>5. Αντιστοίχισε τον αρχιτεκτονικό ρυθμό με τα χαρακτηριστικά του:</strong></p>
+      <table class="match-table">
+        <tr>
+          <th>Ρυθμός</th>
+          <th>Χαρακτηριστικά</th>
+        </tr>
+        <tr>
+          <td>Δωρικός</td>
+          <td>
+            <select id="match1">
+              <option>--Επιλέξτε--</option>
+              <option>Περίτεχνα φύλλα ακάνθου</option>
+              <option>Απλότητα και στιβαρότητα</option>
+              <option>Ελαφρότητα και σπείρες</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Ιωνικός</td>
+          <td>
+            <select id="match2">
+              <option>--Επιλέξτε--</option>
+              <option>Περίτεχνα φύλλα ακάνθου</option>
+              <option>Απλότητα και στιβαρότητα</option>
+              <option>Ελαφρότητα και σπείρες</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Κορινθιακός</td>
+          <td>
+            <select id="match3">
+              <option>--Επιλέξτε--</option>
+              <option>Περίτεχνα φύλλα ακάνθου</option>
+              <option>Απλότητα και στιβαρότητα</option>
+              <option>Ελαφρότητα και σπείρες</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <button class="submit-btn" onclick="submitQuiz()">Υποβολή Απαντήσεων</button>
+    <div id="results" class="results-container"></div>
+  </main>
+
+  <footer class="chapter-footer">
+    <p>&copy; 2025 Εκπαιδευτικό Λογισμικό – Η Ακρόπολη | Πανεπιστήμιο Πειραιώς</p>
+  </footer>
+
+  <script>
+    async function submitQuiz() {
+      let score = 0;
+      const userAnswers = {};
+
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      userAnswers.q1 = q1 ? q1.value : null;
+      userAnswers.q2 = q2 ? q2.value : null;
+      if (q1 && q1.value === "Δωρικός") score++;
+      if (q2 && q2.value === "Κομψότητα και διακοσμητικότητα") score++;
+
+      const q3 = document.querySelector('input[name="q3"]:checked');
+      const q4 = document.querySelector('input[name="q4"]:checked');
+      userAnswers.q3 = q3 ? q3.value : null;
+      userAnswers.q4 = q4 ? q4.value : null;
+      if (q3 && q3.value === "Λάθος") score++;
+      if (q4 && q4.value === "Σωστό") score++;
+
+      const match1 = document.getElementById("match1").value;
+      const match2 = document.getElementById("match2").value;
+      const match3 = document.getElementById("match3").value;
+      userAnswers.match1 = match1;
+      userAnswers.match2 = match2;
+      userAnswers.match3 = match3;
+      if (match1 === "Απλότητα και στιβαρότητα") score++;
+      if (match2 === "Ελαφρότητα και σπείρες") score++;
+      if (match3 === "Περίτεχνα φύλλα ακάνθου") score++;
+
+      const totalQuestions = 7;
+      const resultContainer = document.getElementById("results");
+      resultContainer.innerHTML = `<p><strong>Σκορ: ${score} / ${totalQuestions}</strong></p>`;
+      resultContainer.scrollIntoView({ behavior: "smooth" });
+
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user && user.id) {
+        try {
+          await fetch('http://localhost:3000/save-quiz-result', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId: user.id, chapterId: 3, score, totalQuestions, answers: userAnswers })
+          });
+        } catch (err) {
+          console.error('Failed to save result:', err);
+        }
+      }
+    }
+  </script>
+</body>
+</html>

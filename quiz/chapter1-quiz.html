@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Κουίζ: Η Ιστορία της Ακρόπολης</title>
+  <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <h1>Κουίζ - Η Ακρόπολη</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="../home/home.html" class="nav-link"><i class="fas fa-home"></i> Αρχική</a>
+      <a href="/chapter1/chapter1.html" class="nav-link"><i class="fas fa-book"></i> Επιστροφή στο Κεφάλαιο</a>
+    </nav>
+  </header>
+
+  <main class="quiz-container">
+    <section class="intro-section">
+      <h2><i class="fas fa-question-circle"></i> Ερωτήσεις Κατανόησης</h2>
+      <p>Απαντήστε στις παρακάτω ερωτήσεις για να αξιολογήσετε την κατανόησή σας για την ιστορία της Ακρόπολης.</p>
+    </section>
+
+    <form id="quiz-form">
+      <!-- Ερώτηση 1 -->
+      <div class="quiz-question">
+        <p><strong>1. Ποιο ήταν το κύριο χαρακτηριστικό της Ακρόπολης κατά τη Νεολιθική περίοδο;</strong></p>
+        <label><input type="radio" name="q1" value="a"> Χρησίμευε ως ναός για την Αθηνά Παρθένο</label><br>
+        <label><input type="radio" name="q1" value="b"> Ήταν φυσικό οχυρό κατοικιών</label><br>
+        <label><input type="radio" name="q1" value="c"> Είχε κατασκευαστεί ο Παρθενώνας</label>
+      </div>
+
+      <!-- Ερώτηση 2 -->
+      <div class="quiz-question">
+        <p><strong>2. Ποιος κατασκεύασε τα Κυκλώπεια Τείχη;</strong></p>
+        <label><input type="radio" name="q2" value="a"> Οι Ρωμαίοι</label><br>
+        <label><input type="radio" name="q2" value="b"> Οι Φράγκοι</label><br>
+        <label><input type="radio" name="q2" value="c"> Οι Μυκηναίοι</label>
+      </div>
+
+      <!-- Ερώτηση 3 -->
+      <div class="quiz-question">
+        <p><strong>3. Ποιος ηγέτης ξεκίνησε την ανοικοδόμηση της Ακρόπολης κατά την Κλασική περίοδο;</strong></p>
+        <label><input type="radio" name="q3" value="a"> Σύλλας</label><br>
+        <label><input type="radio" name="q3" value="b"> Περικλής</label><br>
+        <label><input type="radio" name="q3" value="c"> Πεισίστρατος</label>
+      </div>
+
+      <!-- Ερώτηση 4 -->
+      <div class="quiz-question">
+        <p><strong>4. Ποιο κτίριο της Ακρόπολης φιλοξενούσε τις Καρυάτιδες;</strong></p>
+        <label><input type="radio" name="q4" value="a"> Ερέχθειο</label><br>
+        <label><input type="radio" name="q4" value="b"> Προπύλαια</label><br>
+        <label><input type="radio" name="q4" value="c"> Ναός της Αθηνάς Νίκης</label>
+      </div>
+
+      <!-- Ερώτηση 5 -->
+      <div class="quiz-question">
+        <p><strong>5. Τι συνέβη στον Παρθενώνα κατά την Οθωμανική περίοδο;</strong></p>
+        <label><input type="radio" name="q5" value="a"> Μετατράπηκε σε τζαμί</label><br>
+        <label><input type="radio" name="q5" value="b"> Γκρεμίστηκε πλήρως</label><br>
+        <label><input type="radio" name="q5" value="c"> Χρησιμοποιήθηκε ως αγορά</label>
+      </div>
+
+      <!-- Υποβολή -->
+      <button type="button" class="submit-btn">Υποβολή Απαντήσεων</button>
+    </form>
+
+    <!-- Αποτελέσματα -->
+    <section id="quiz-result" class="result-section" style="display: none;">
+      <h3>Αποτελέσματα</h3>
+      <p id="score-text"></p>
+    </section>
+  </main>
+
+  <footer class="chapter-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Εκπαιδευτικό Λογισμικό – Η Ακρόπολη | Πανεπιστήμιο Πειραιώς</p>
+    </div>
+  </footer>
+
+  <script src="chapter-quiz.js"></script>
+
+</body>
+</html>

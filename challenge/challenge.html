@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Πρόκληση – Τελικό Τεστ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="challenge.css">
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fas fa-brain"></i> Πρόκληση – Προχωρημένες Ερωτήσεις</h1>
+    <form id="challenge-form">
+      <div class="question">
+        <h3>1. Ποιο αρχιτεκτονικό στοιχείο διαχωρίζει τον Παρθενώνα σε ναό και οπισθόδομο;</h3>
+        <div class="options">
+          <label><input type="radio" name="q1" value="a"> Μετώπη</label>
+          <label><input type="radio" name="q1" value="b"> Επιστύλιο</label>
+          <label><input type="radio" name="q1" value="c"> Εγκάρσιος τοίχος</label>
+          <label><input type="radio" name="q1" value="d"> Στυλοβάτης</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>2. Ποιο από τα παρακάτω ήταν κυρίως χαρακτηριστικό του Κορινθιακού ρυθμού;</h3>
+        <div class="options">
+          <label><input type="radio" name="q2" value="a"> Απλός κιονοκράνος</label>
+          <label><input type="radio" name="q2" value="b"> Φυτικά διακοσμητικά (ακάνθες)</label>
+          <label><input type="radio" name="q2" value="c"> Ζωφόρος με τρίγλυφα</label>
+          <label><input type="radio" name="q2" value="d"> Οριζόντια στέγη</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>3. Ποιο μνημείο της Ακρόπολης ήταν αφιερωμένο στον Ποσειδώνα και την Αθηνά;</h3>
+        <div class="options">
+          <label><input type="radio" name="q3" value="a"> Παρθενώνας</label>
+          <label><input type="radio" name="q3" value="b"> Ερέχθειο</label>
+          <label><input type="radio" name="q3" value="c"> Ναός Αθηνάς Νίκης</label>
+          <label><input type="radio" name="q3" value="d"> Προπύλαια</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>4. Ποια από τις παρακάτω τεχνικές χρησιμοποιήθηκε για την οπτική διόρθωση στον Παρθενώνα;</h3>
+        <div class="options">
+          <label><input type="radio" name="q4" value="a"> Καμπύλωση του στυλοβάτη</label>
+          <label><input type="radio" name="q4" value="b"> Ασυμμετρία κιόνων</label>
+          <label><input type="radio" name="q4" value="c"> Αφαίρεση τυμπάνων</label>
+          <label><input type="radio" name="q4" value="d"> Πλήρης ισομέρεια</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>5. Ποια χρονική περίοδος θεωρείται η πιο παραγωγική για την κατασκευή της Ακρόπολης;</h3>
+        <div class="options">
+          <label><input type="radio" name="q5" value="a"> Ελληνιστική Περίοδος</label>
+          <label><input type="radio" name="q5" value="b"> Αρχαϊκή Περίοδος</label>
+          <label><input type="radio" name="q5" value="c"> Κλασική Περίοδος</label>
+          <label><input type="radio" name="q5" value="d"> Ρωμαϊκή Περίοδος</label>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <button type="submit">Υποβολή</button>
+      </div>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: 'c',
+      q2: 'b',
+      q3: 'b',
+      q4: 'a',
+      q5: 'c'
+    };
+
+    document.getElementById('challenge-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      let score = 0;
+      for (let key in answers) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === answers[key]) {
+          score++;
+        }
+      }
+      document.getElementById('result').innerText = `Αποτέλεσμα: ${score}/5. ${score === 5 ? 'Εξαιρετική δουλειά! 🎉' : 'Δοκιμάστε ξανά!'}`;
+    });
+  </script>
+  <script src="challenge.js"></script>
+</body>
+</html>

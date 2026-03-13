@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Πρόοδος Χρήστη</title>
+  <link rel="stylesheet" href="progress.css">
+</head>
+<body>
+    <header class="header">
+    <div class="logo-container">
+      <h1>Η Ακρόπολη</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="../home/home.html" class="nav-link"><i class="fas fa-home"></i> Αρχική</a>
+      <button class="logout-btn" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Αποσύνδεση
+      </button>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+  <div class="container">
+    <h1>Η Πρόοδός Μου</h1>
+    <div id="user-progress"></div>
+    <div id="recommendations"></div>
+  </div>
+
+  <script src="progress.js"></script>
+</body>
+</html>

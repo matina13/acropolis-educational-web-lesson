@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Κουίζ: Τα Μνημεία της Ακρόπολης</title>
+  <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <h1>Κουίζ - Τα Μνημεία της Ακρόπολης</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="../home/home.html" class="nav-link"><i class="fas fa-home"></i> Αρχική</a>
+      <a href="/chapter2/chapter2.html" class="nav-link"><i class="fas fa-book"></i> Επιστροφή στο Κεφάλαιο</a>
+    </nav>
+  </header>
+
+  <main class="quiz-container">
+    <section class="intro-section">
+      <h2><i class="fas fa-question-circle"></i> Ερωτήσεις Κατανόησης</h2>
+      <p>Απαντήστε στις παρακάτω ερωτήσεις για να αξιολογήσετε την κατανόησή σας για τα μνημεία της Ακρόπολης.</p>
+    </section>
+
+    <form id="quiz-form">
+      <!-- Ερώτηση 1 -->
+      <div class="quiz-question">
+        <p><strong>1. Σε ποια θεότητα ήταν αφιερωμένος ο Παρθενώνας;</strong></p>
+        <label><input type="radio" name="q1" value="a"> Στον Δία</label><br>
+        <label><input type="radio" name="q1" value="b"> Στην Αθηνά Παρθένο</label><br>
+        <label><input type="radio" name="q1" value="c"> Στον Απόλλωνα</label>
+      </div>
+
+      <!-- Ερώτηση 2 -->
+      <div class="quiz-question">
+        <p><strong>2. Ποιο αρχιτεκτονικό στοιχείο ξεχωρίζει στο Ερέχθειο;</strong></p>
+        <label><input type="radio" name="q2" value="a"> Οι Κορίνθιοι κίονες</label><br>
+        <label><input type="radio" name="q2" value="b"> Η συμμετρική του δομή</label><br>
+        <label><input type="radio" name="q2" value="c"> Οι Καρυάτιδες</label>
+      </div>
+
+      <!-- Ερώτηση 3 -->
+      <div class="quiz-question">
+        <p><strong>3. Ποιος αρχιτέκτονας σχεδίασε τα Προπύλαια;</strong></p>
+        <label><input type="radio" name="q3" value="a"> Ικτίνος</label><br>
+        <label><input type="radio" name="q3" value="b"> Καλλικράτης</label><br>
+        <label><input type="radio" name="q3" value="c"> Μνησικλής</label>
+      </div>
+
+      <!-- Ερώτηση 4 -->
+      <div class="quiz-question">
+        <p><strong>4. Ποιο ήταν το οικοδομικό υλικό των Προπυλαίων;</strong></p>
+        <label><input type="radio" name="q4" value="a"> Τραβερτίνο</label><br>
+        <label><input type="radio" name="q4" value="b"> Μάρμαρο Πεντελικού</label><br>
+        <label><input type="radio" name="q4" value="c"> Ασβεστόλιθος</label>
+      </div>
+
+      <!-- Ερώτηση 5 -->
+      <div class="quiz-question">
+        <p><strong>5. Ποιος ήταν υπεύθυνος για την επίβλεψη της κατασκευής του Παρθενώνα;</strong></p>
+        <label><input type="radio" name="q5" value="a"> Μνησικλής</label><br>
+        <label><input type="radio" name="q5" value="b"> Φειδίας</label><br>
+        <label><input type="radio" name="q5" value="c"> Περικλής</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Υποβολή Απαντήσεων</button>
+    </form>
+
+    <section id="quiz-result" class="result-section" style="display: none;">
+      <h3>Αποτελέσματα</h3>
+      <p id="score-text"></p>
+    </section>
+  </main>
+
+  <footer class="chapter-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Εκπαιδευτικό Λογισμικό – Η Ακρόπολη | Πανεπιστήμιο Πειραιώς</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('quiz-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const correctAnswers = {
+        q1: 'b',
+        q2: 'c',
+        q3: 'c',
+        q4: 'b',
+        q5: 'b'
+      };
+
+      let score = 0;
+      let total = Object.keys(correctAnswers).length;
+      const userAnswers = {};
+
+      for (let q in correctAnswers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        userAnswers[q] = selected ? selected.value : null;
+        if (selected && selected.value === correctAnswers[q]) {
+          score++;
+        }
+      }
+
+      document.getElementById('quiz-result').style.display = 'block';
+      document.getElementById('score-text').textContent = `Απαντήσατε σωστά σε ${score} από τις ${total} ερωτήσεις.`;
+
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user && user.id) {
+        try {
+          await fetch('http://localhost:3000/save-quiz-result', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId: user.id, chapterId: 2, score, totalQuestions: total, answers: userAnswers })
+          });
+        } catch (err) {
+          console.error('Failed to save result:', err);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

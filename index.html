@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Η Ακρόπολη – Εκπαιδευτικό Μάθημα</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="course-bg">
+    <div class="course-auth-card">
+      <div class="course-header">
+        <div>
+          <h1>Η Ακρόπολη</h1>
+          <p class="course-desc">Διαδραστικό Εκπαιδευτικό Μάθημα για το σπουδαιότερο μνημείο της Αθήνας</p>
+        </div>
+      </div>
+      <div class="course-info-box">
+        <p>
+          Εξερευνήστε τη μυθολογία, την ιστορία, την αρχιτεκτονική και τα σημεία ενδιαφέροντος της Ακρόπολης μέσα από διαδραστικές ενότητες, quiz και παρακολούθηση προόδου.
+        </p>
+      </div>
+      <div class="tab">
+        <button id="login-tab" class="active" onclick="showTab('login')">Είσοδος</button>
+        <button id="register-tab" onclick="showTab('register')">Εγγραφή</button>
+      </div>
+      <div id="login-form">
+        <div class="form-group">
+          <label for="login-username">Όνομα χρήστη</label>
+          <input type="text" id="login-username" autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Κωδικός</label>
+          <input type="password" id="login-password" autocomplete="current-password">
+        </div>
+        <div id="login-error" class="error"></div>
+        <button  onclick="login()">Είσοδος</button>
+      </div>
+      <div id="register-form" style="display:none;">
+        <div class="form-group">
+          <label for="reg-username">Όνομα χρήστη</label>
+          <input type="text" id="reg-username" autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Κωδικός</label>
+          <input type="password" id="reg-password" autocomplete="new-password">
+        </div>
+        <div id="register-error" class="error"></div>
+        <div id="register-success" class="success"></div>
+        <button onclick="register()">Εγγραφή</button>
+      </div>
+    </div>
+    <footer class="course-footer">
+      &copy; 2025 Εκπαιδευτικό Λογισμικό – Η Ακρόπολη | Πανεπιστήμιο Πειραιώς
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
